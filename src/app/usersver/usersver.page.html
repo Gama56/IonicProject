@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+            <ion-buttons slot="start">
+                    <ion-back-button defaultHref="paneladmin"></ion-back-button>
+            </ion-buttons>
+        <ion-title>
+                Obteniendo usuarios
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <button (click)="ObtenerUsuarios()" class="desing">
+    Obtener Usuarios
+  </button>
+
+    <ion-list *ngFor="let usuario of usuarios">
+        <ion-item>
+            <ion-icon name="person"></ion-icon>
+            <ion-label>Nombre:</ion-label>
+            <ion-label>{{usuario.nombre}}</ion-label>
+            <br>
+            <ion-label>Apellidos:</ion-label>
+            <ion-label>{{usuario.apellido}}</ion-label>
+            <br>
+            <ion-label>Correo:</ion-label>
+            <ion-label>{{usuario.correo}}</ion-label>
+            <ng-container mathColumnDef="Eliminar">
+                <button (click)="Eliminar(usuario.Id)">Eliminar Cliente</button>
+            </ng-container>
+        </ion-item>
+    </ion-list>
+</ion-content>
