@@ -15,7 +15,7 @@ export class UserService {
   constructor(
     public _http: HttpClient
   ) {
-    this.url = 'https://b0b39d8d.ngrok.io/';
+    this.url = 'https://c544ba11.ngrok.io/';
 
   }
 
